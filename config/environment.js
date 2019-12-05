@@ -47,5 +47,10 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV['ember-cli-mirage'] = {
+    directory: 'app/mirage',
+    enabled: !ENV.useDb
+  };
+
   return ENV;
 };
